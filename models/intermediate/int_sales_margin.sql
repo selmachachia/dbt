@@ -1,11 +1,11 @@
 
 select 
-    product_id,
+    products_id,
     date_date,
     orders_id,
     revenue,
     quantity,
-    CAST(purchase_price as FLOAT64),
+    CAST(purchase_price as FLOAT64) as purchase_price,
     ROUND(s.quantity*CAST(purchase_price as FLOAT64),2) AS purchase_cost,
     s.revenue - ROUND(s.quantity*CAST(purchase_price as FLOAT64),2) AS margin,
 from {{ ref('stg_raw__sales')}} s

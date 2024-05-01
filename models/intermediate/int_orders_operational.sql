@@ -9,6 +9,6 @@ o.orders_id
 ,s.logcost
 ,s.ship_cost
 FROM {{ref("int_sales_margin")}} o
-LEFT JOIN FROM {{ref("stg_raw_ship")}} s
+LEFT JOIN {{ref("stg_raw_ship")}} s
     USING(orders_id)
 ORDER BY orders_id DESC
