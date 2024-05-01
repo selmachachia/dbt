@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_raw_product
-  - name: stg_raw_sales
+  - name: stg_raw__sales
   - name: stg_raw_ship
   - name: int_sales_margin
     description: margin calcultation per order line / product sale
@@ -33,3 +33,4 @@ models:
         description: Operational margin = margin + shipping fee - log_cost - ship_cost
   - name: finance_days
     description: finance calculation per days
+    
